@@ -13,22 +13,22 @@ This is the brief documentation of Checker application built utilizing Symfony f
 
     -   #### Check two strings if they are anagrams
 
-        1. console app:check-anagram word anagram
-        2. To view help for the above feature you can use this command  : console app:check-anagram --help
+        1.  php bin/console app:check-anagram word anagram
+        2. To view help for the above feature you can use this command  :  php bin/console app:check-anagram --help
         
 -   ### Check Palindrome
 
     -   #### Check if strings is a Palindrome
 
-        1. console app:check-palindrome string
-        2. To view help for the above feature you can use this command  : console app:check-palindrome --help
+        1.  php bin/console app:check-palindrome string
+        2. To view help for the above feature you can use this command  :  php bin/console app:check-palindrome --help
 
 -   ### Check Pangram
 
     -   #### Check if sentence is pangram (double quote the sentence otherwise CLI will treat it as multiple params)
 
-        1. console app:check-pangram sentence 
-        2. To view help for the above feature you can use this command  : console app:check-pangram --help	
+        1.  php bin/console app:check-pangram sentence 
+        2. To view help for the above feature you can use this command  :  php bin/console app:check-pangram --help	
 
 -   ### Unit Test
     
