@@ -1,6 +1,6 @@
 <?php
 namespace App\Classes;
-define("NO_OF_CHARS", 256);
+define("NO_OF_CHARS", 26);
 class Anagram {
     
     
@@ -15,9 +15,10 @@ class Anagram {
         // in the corresponding count array
         for ($i = 0; $i < strlen($str1) && $i < strlen($str2); $i++) {
  
-            $count1[ord($str1[$i])]++;
-            $count2[ord($str2[$i])]++;
+            $count1[ord($str1[$i]) - ord('a')]++;
+            $count2[ord($str2[$i]) - ord('a')]++;
         }
+        print_r($count1);
 
 	// If both strings are of different length. Removing
 	// this condition will make the program fail for strings
