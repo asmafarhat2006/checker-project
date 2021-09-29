@@ -9,20 +9,20 @@
 
 -   ### Building Structure of Application
 
-    -   Around 30mins to build the overall Console API structure
+    -   Around 30mins to build the overall Console API structure with Console Commands
         
 -   ### Check Palindrome
 
-    -   10mins
+    -   15mins
 
 -   ### Check Pangram
 
-    -   10mins
+    -   15mins
 	
 -   ### Check Anagram
 
-    -   10mins
+    -   15mins
 	
 -   ### Unit Test
     
-	-  30mins to setup the Unit Test suite for commands and the classes
+	-  15mins to setup the Unit Test suite for commands and the classes
