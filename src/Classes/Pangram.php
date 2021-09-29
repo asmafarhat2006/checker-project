@@ -9,6 +9,8 @@ class Pangram {
      * @return boolean
      */
     public function isPangram( $string ) {
+
+        if(empty($string)) return false;
         $string = preg_replace('/[^a-z]+/', '', strtolower($string));
     
         //define "alphabet"

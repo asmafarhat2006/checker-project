@@ -14,19 +14,20 @@ class Palindrome {
      * @return bool
      */
     public function check( $str ) {
+        if(empty($str)) return false;
         
         $str = str_replace(' ', '', $str);
         //remove special characters
         $str = preg_replace('/[^A-Za-z0-9\-]/', '', $str);
          //change case to lower
         $str = strtolower($str);
-
+        $length = strlen($str);
         $i = 0;
         //                                
-        while ($str[$i] == $str[strlen($str) - ($i + 1)]) {
+        while ($str[$i] == $str[$length - ($i + 1)]) {
             $i++;
 
-            if ($i > strlen($str) / 2) {
+            if ($i > $length / 2) {
                 return true;
             }
         }

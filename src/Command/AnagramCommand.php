@@ -1,5 +1,5 @@
 <?php
-// src/Command/CreateUserCommand.php
+
 namespace App\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -20,7 +20,7 @@ class AnagramCommand extends Command
         ->setDescription('Checks whether two strings are anagrams.')
         ->addArgument('word', InputArgument::REQUIRED, 'The main word')
         ->addArgument('anagram', InputArgument::REQUIRED, 'Word to be checked if it is anagram with the main one')
-        ->setHelp("An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once.\nLink : https://en.wikipedia.org/wiki/Anagram")
+        ->setHelp("An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once.")
     ;
     ;
     }

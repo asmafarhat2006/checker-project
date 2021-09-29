@@ -1,36 +1,48 @@
 <?php
 namespace App\Classes;
 define("NO_OF_CHARS", 26);
+/**
+ * An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a
+ * new word or phrase, using all the original letters exactly once.
+ * reads the same backward or forward.
+ 
+ */
 class Anagram {
     
     
     public function isAnagram($str1,$str2){
+
+        if(empty($str1) || empty($str2) ){return false;}
+
+
         $str1 = $this->sanitizeString($str1);
         $str2 = $this->sanitizeString($str2);
-        // Create 2 count arrays and initialize all values as 0
+        // Create two int arrays behaving like a hashset to store num of occurences of each char in string 
         $count1 = array_fill( 0, NO_OF_CHARS, null);
         $count2 = array_fill( 0, NO_OF_CHARS, null);
 
-	    // For each character in input strings, increment count
+	    $lengthOfFirstString = strlen($str1);
+        $lengthOfSecondString = strlen($str2);
+        /* If both strings are of different length.cant be anagrams */
+            if($lengthOfFirstString != $lengthOfSecondString){
+                return false;
+            }
+        // For each character in input strings, increment count
         // in the corresponding count array
-        for ($i = 0; $i < strlen($str1) && $i < strlen($str2); $i++) {
+
+        for ($i = 0; $i < $lengthOfFirstString && $i < $lengthOfSecondString; $i++) {
  
             $count1[ord($str1[$i]) - ord('a')]++;
             $count2[ord($str2[$i]) - ord('a')]++;
         }
-        print_r($count1);
-
-	// If both strings are of different length. Removing
-	// this condition will make the program fail for strings
-        if(strlen($str1) != strlen($str2)){
-            return false;
-        }
-	// Compare count arrays
-	    for ($j = 0; $j < NO_OF_CHARS; $j++){
+      
+	
+        // Compare count arrays
+        for ($j = 0; $j < NO_OF_CHARS; $j++){
             if ($count1[$j] != $count2[$j])
-			    return false;
+                    return false;
 
-        }
+            }
 		    
 	    return true;
     }
